@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Arcano</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<!-- HOME -->
+<div id="home" class="tela ativa">
+    <h1>Portal scratch</h1>
+
+    <div class="menu">
+        <button onclick="irPara('chat')">🔮 IA</button>
+        <button onclick="irPara('jogos')">🎮 Jogos</button>
+    </div>
+</div>
+
+<!-- CHAT -->
+<div id="chat" class="tela">
+    <button class="voltar" onclick="irPara('home')">← Voltar</button>
+
+    <div id="chat-box"></div>
+
+    <div class="input-area">
+        <input id="input" type="text" placeholder="Digite sua mensagem...">
+        <button onclick="enviar()">➤</button>
+    </div>
+</div>
+
+<!-- JOGOS -->
+<div id="jogos" class="tela">
+    <button class="voltar" onclick="irPara('home')">← Voltar</button>
+
+<div class="container mt-4">
+    <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-md-6">
+            <div class="card bg-dark text-white h-100 game"
+                 onclick="abrirJogo('https://scratch.mit.edu/projects/10128407/embed')">
+                <div class="card-body text-center">
+                    <img src="https://1000logos.net/wp-content/uploads/2018/10/Minecraft-Logo.png" class="card-img-top">
+                    <h5 class="card-title">🎮 Jogo 1</h5>
+                    <p class="card-text">Clique para jogar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-md-6">
+            <div class="card bg-dark text-white h-100 game"
+                 onclick="abrirJogo('https://scratch.mit.edu/projects/1047361223/embed')">
+                <div class="card-body text-center">
+                    <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000009921/44bea8c565db26c0c470a6325a47c9ea031633945cb91e4b5e1b1a39b01a2cdb">
+                    <h5 class="card-title">🎮 Jogo 2</h5>
+                    <p class="card-text">Clique para jogar</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<!-- PLAYER -->
+<div id="telaJogo" class="tela">
+    <button class="voltar" onclick="fecharJogo()">← Voltar</button>
+    <iframe id="frameJogo"></iframe>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
