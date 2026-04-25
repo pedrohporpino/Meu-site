@@ -1,0 +1,126 @@
+body {
+    text-align: center;
+    margin: 0;
+    font-family: Arial;
+    background: #000;
+    color: white;
+    overflow: hidden;
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(0.5px) brightness(1.2);
+}
+
+/* TELAS */
+.tela {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+
+    transition: 0.4s ease;
+    z-index: 2;
+}
+
+.tela.ativa {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* HOME */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* CHAT */
+#chat {
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* MENSAGENS */
+.msg {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.user {
+    background: #f8f8f8;
+    margin-left: auto;
+    color: black;
+}
+
+.bot {
+    background: #ffffff;
+    color: black;
+}
+
+/* INPUT */
+.input-area {
+    display: flex;
+    padding: 10px;
+}
+
+#input {
+    flex: 1;
+    padding: 10px;
+    background: #fff;
+    color: black;
+    border: none;
+}
+
+/* BOTÕES */
+.voltar {
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* JOGOS */
+.game {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.game:hover {
+    transform: scale(1.05);
+}
+
+#frameJogo {
+    width: 100%;
+    height: 80vh;
+    border: none;
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
